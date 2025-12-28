@@ -2,219 +2,96 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Mitolyn – Official Website</title>
+<title>Mitolyn – Official Offer</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body{
-  margin:0;
-  font-family:Arial, Helvetica, sans-serif;
-  background:#f5f7fa;
-  color:#222;
-}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f7fa;color:#222}
 a{text-decoration:none}
 .container{max-width:1200px;margin:auto;padding:0 20px}
+.btn{background:#ff5a1f;color:#fff;padding:14px 26px;border-radius:6px;font-weight:700;display:inline-block}
 
 /* HEADER */
-.header{
-  background:#fff;
-  padding:15px 0;
-  box-shadow:0 2px 10px rgba(0,0,0,.1);
-}
-.header-flex{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-.logo{
-  font-size:28px;
-  font-weight:800;
-  background:linear-gradient(90deg,#ff4aa2,#ffb347,#6a5cff);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-.nav a{
-  margin-left:15px;
-  font-weight:600;
-  color:#333;
-}
-.btn{
-  background:#ff5a1f;
-  color:#fff;
-  padding:12px 22px;
-  border-radius:6px;
-  font-weight:700;
-  display:inline-block;
-}
+.header{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.1);position:sticky;top:0;z-index:999}
+.header-flex{display:flex;align-items:center;justify-content:space-between;padding:15px 0}
+.logo{font-size:28px;font-weight:800;background:linear-gradient(90deg,#ff4aa2,#ffb347,#6a5cff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.nav a{margin-left:18px;font-weight:600;color:#333}
 
 /* HERO */
-.hero{
-  background:#0b84c6;
-  color:#fff;
-  padding:70px 0;
-}
+.hero{background:#0b84c6;color:#fff;padding:80px 0}
 .hero-flex{display:flex;gap:40px}
 .hero-left{width:40%}
 .hero-right{width:60%}
-.hero h1{font-size:50px;line-height:1.1}
+.hero h1{font-size:52px;line-height:1.1}
 .hero p{font-size:18px;margin:20px 0}
 .product-img{width:280px}
-.video{
-  height:350px;
-  background:#ccc;
-  border-radius:8px;
-  position:relative;
-}
+.video{height:350px;background:#ccc;border-radius:8px;position:relative}
+.play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:70px;height:70px;background:red;border-radius:50%}
+.play:after{content:"";position:absolute;top:50%;left:55%;transform:translate(-50%,-50%);border-left:18px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent}
 
 /* TRUST */
-.trust{
-  background:#fff;
-  padding:40px 0;
-  text-align:center;
-  font-weight:700;
-}
+.trust{background:#fff;padding:35px 0;text-align:center;font-weight:700}
+.trust span{margin:0 15px}
+
+/* SECTIONS */
+.section{padding:80px 0}
+.section h2{text-align:center;font-size:40px;margin-bottom:40px}
+.bg-light{background:#eef3f8}
+.bg-white{background:#fff}
 
 /* PRICE */
-.price{
-  background:#fff;
-  padding:60px 0;
-}
-.price-box{
-  background:#f1f1f1;
-  border-radius:12px;
-  padding:40px;
-  text-align:center;
-}
-.price h2{font-size:40px}
-.amount{
-  font-size:48px;
-  color:#ff5a1f;
-  font-weight:800;
-}
-.guarantee{
-  margin-top:20px;
-  font-weight:700;
-  color:#0b84c6;
-}
+.price-box{background:#f1f1f1;border-radius:14px;padding:45px;text-align:center}
+.amount{font-size:52px;color:#ff5a1f;font-weight:800}
+.guarantee{color:#0b84c6;font-weight:700;margin-top:15px}
 
-/* INGREDIENTS */
-.ingredients{
-  background:#eef3f8;
-  padding:70px 0;
-}
-.ingredients h2{text-align:center;font-size:38px}
-.ing-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:30px;
-  margin-top:40px;
-}
-.ing{
-  background:#fff;
-  padding:25px;
-  border-radius:10px;
-  text-align:center;
-}
-.ing img{width:120px;margin-bottom:15px}
+/* GRID */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px}
+.card{background:#fff;padding:30px;border-radius:12px;text-align:center}
+.card img{width:120px;margin-bottom:15px}
 
 /* GALLERY */
-.gallery{
-  background:#fff;
-  padding:70px 0;
-}
-.gallery-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-  margin-top:40px;
-}
-.gallery img{
-  width:100%;
-  border-radius:10px;
-  background:#ccc;
-}
+.gallery img{width:100%;border-radius:12px;background:#ccc}
 
 /* REVIEWS */
-.reviews{
-  background:#eef3f8;
-  padding:70px 0;
-}
-.review-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:25px;
-  margin-top:40px;
-}
-.review-box{
-  background:#fff;
-  padding:25px;
-  border-radius:10px;
-}
+.review-box{background:#fff;padding:25px;border-radius:12px}
 .stars{color:#ffcc33}
 
-/* CTA */
-.cta{
-  background:#0b84c6;
-  color:#fff;
-  padding:80px 0;
-  text-align:center;
-}
+/* FAQ */
+.faq-item{background:#fff;padding:25px;border-radius:10px;margin-bottom:20px}
 
-/* STICKY BUTTON */
-.sticky-btn{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  z-index:999;
-}
-.sticky-btn a{
-  background:#ff5a1f;
-  color:#fff;
-  padding:15px 22px;
-  border-radius:50px;
-  font-weight:800;
-  box-shadow:0 4px 15px rgba(0,0,0,.3);
-}
+/* CTA */
+.cta{background:#0b84c6;color:#fff;text-align:center;padding:90px 0}
+.cta h2{font-size:44px}
 
 /* FOOTER */
-.footer{
-  background:#111;
-  color:#aaa;
-  text-align:center;
-  padding:30px;
-  font-size:14px;
-}
+.footer{background:#111;color:#aaa;text-align:center;padding:30px;font-size:14px}
 
 @media(max-width:900px){
-  .hero-flex{flex-direction:column}
-  .hero-left,.hero-right{width:100%}
+.hero-flex{flex-direction:column}
+.hero-left,.hero-right{width:100%}
+.hero h1{font-size:42px}
 }
 </style>
-
-<!-- 🔥 AFFILIATE LINK CONFIG -->
-<script>
-  const AFFILIATE_LINK = "https://61aa51o5nq38gy8btltadd3oci.hop.clickbank.net";
-
-  document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".buy-btn").forEach(btn => {
-      btn.href = AFFILIATE_LINK;
-      btn.target = "_blank";
-    });
-  });
-</script>
-
 </head>
 
 <body>
+
+<!-- AFFILIATE LINK -->
+<!-- 🔴 CHANGE THIS -->
+<script>
+const affiliateLink = "https://61aa51o5nq38gy8btltadd3oci.hop.clickbank.net";
+</script>
 
 <!-- HEADER -->
 <div class="header">
   <div class="container header-flex">
     <div class="logo">MITOLYN</div>
     <div class="nav">
+      <a href="#about">About</a>
       <a href="#ingredients">Ingredients</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#" class="btn buy-btn">Order Now</a>
+      <a href="#bonuses">Free Bonuses</a>
+      <a href="#faq">FAQ</a>
+      <a href="#" onclick="goOrder()" class="btn">Order Now</a>
     </div>
   </div>
 </div>
@@ -227,74 +104,89 @@ a{text-decoration:none}
     </div>
     <div class="hero-right">
       <h1>Unlock Your<br>Metabolic Power</h1>
-      <p>Burn More Calories, Boost Energy & Feel Amazing.</p>
-      <div class="video"></div>
-      <br>
-      <a href="#" class="btn buy-btn">Order Now</a>
+      <p>Burn Fat, Boost Energy & Feel Amazing Naturally.</p>
+      <div class="video"><div class="play"></div></div>
     </div>
   </div>
 </div>
 
 <!-- TRUST -->
 <div class="trust">
-  ✔ 100% Satisfaction &nbsp; | &nbsp; ✔ 90-Day Money-Back Guarantee &nbsp; | &nbsp; ✔ Secure Checkout
+  <span>✔ 100% Satisfaction</span>
+  <span>✔ 90-Day Money-Back Guarantee</span>
+  <span>✔ Made in USA</span>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="section bg-white">
+  <div class="container">
+    <h2>What Is Mitolyn?</h2>
+    <p style="font-size:18px;text-align:center;max-width:900px;margin:auto">
+      Mitolyn is a natural dietary supplement designed to support metabolism,
+      boost energy levels and help your body burn fat more efficiently.
+    </p>
+  </div>
 </div>
 
 <!-- PRICE -->
-<div class="price">
+<div class="section bg-light">
   <div class="container">
     <div class="price-box">
-      <h2>Today’s Special Price</h2>
+      <h2>Special Limited Time Offer</h2>
       <div class="amount">$49 Per Bottle</div>
       <p>Free Shipping Included</p>
-      <div class="guarantee">90 Days • 100% Money-Back Guarantee</div>
-      <br>
-      <a href="#" class="btn buy-btn">Yes! I Want Mitolyn</a>
+      <div class="guarantee">90 Days 100% Money Back Guarantee</div><br>
+      <a href="#" onclick="goOrder()" class="btn">Order Mitolyn Now</a>
     </div>
   </div>
 </div>
 
 <!-- INGREDIENTS -->
-<div class="ingredients" id="ingredients">
+<div id="ingredients" class="section bg-white">
   <div class="container">
     <h2>Powerful Natural Ingredients</h2>
-    <div class="ing-grid">
-      <div class="ing">
-        <img src="ING-IMAGE.png">
+    <div class="grid">
+      <div class="card">
+        <img src="ADD-INGREDIENT-1.png">
         <h3>Ingredient One</h3>
-        <p>Supports metabolism & fat burn.</p>
+        <p>Supports metabolism and energy.</p>
       </div>
-      <div class="ing">
-        <img src="ING-IMAGE.png">
+      <div class="card">
+        <img src="ADD-INGREDIENT-2.png">
         <h3>Ingredient Two</h3>
-        <p>Boosts natural energy.</p>
+        <p>Helps burn stubborn fat.</p>
       </div>
-      <div class="ing">
-        <img src="ING-IMAGE.png">
+      <div class="card">
+        <img src="ADD-INGREDIENT-3.png">
         <h3>Ingredient Three</h3>
-        <p>Supports overall health.</p>
+        <p>Improves overall health.</p>
       </div>
     </div>
   </div>
 </div>
 
-<!-- GALLERY -->
-<div class="gallery">
+<!-- BONUSES -->
+<div id="bonuses" class="section bg-light">
   <div class="container">
-    <h2>Product Images</h2>
-    <div class="gallery-grid">
-      <img src="IMAGE-1.png">
-      <img src="IMAGE-2.png">
-      <img src="IMAGE-3.png">
+    <h2>Free Bonuses Included</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Bonus #1</h3>
+        <p>Metabolism Boosting Guide</p>
+      </div>
+      <div class="card">
+        <h3>Bonus #2</h3>
+        <p>Fat Burning Meal Plan</p>
+      </div>
     </div>
   </div>
 </div>
 
 <!-- REVIEWS -->
-<div class="reviews" id="reviews">
+<div class="section bg-white">
   <div class="container">
     <h2>Real Customer Reviews</h2>
-    <div class="review-grid">
+    <div class="grid">
       <div class="review-box">
         <div class="stars">★★★★★</div>
         <p>Amazing results within weeks.</p>
@@ -302,14 +194,33 @@ a{text-decoration:none}
       </div>
       <div class="review-box">
         <div class="stars">★★★★★</div>
-        <p>My energy level is so much higher.</p>
+        <p>Energy level is much higher.</p>
         <strong>— Nicholas D</strong>
       </div>
       <div class="review-box">
         <div class="stars">★★★★★</div>
-        <p>Best supplement I’ve tried.</p>
+        <p>Highly recommended.</p>
         <strong>— Sarah K</strong>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div id="faq" class="section bg-light">
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <strong>Is Mitolyn safe?</strong>
+      <p>Yes, Mitolyn is made with natural ingredients in a certified facility.</p>
+    </div>
+    <div class="faq-item">
+      <strong>How long before results?</strong>
+      <p>Most users notice results within a few weeks.</p>
+    </div>
+    <div class="faq-item">
+      <strong>Is there a guarantee?</strong>
+      <p>Yes, 90-day 100% money-back guarantee.</p>
     </div>
   </div>
 </div>
@@ -317,20 +228,21 @@ a{text-decoration:none}
 <!-- FINAL CTA -->
 <div class="cta">
   <h2>Try Mitolyn Risk-Free Today</h2>
-  <p>Protected by Our 90-Day Money-Back Guarantee</p>
-  <a href="#" class="btn buy-btn">Order Now</a>
-</div>
-
-<!-- STICKY BUTTON -->
-<div class="sticky-btn">
-  <a href="#" class="buy-btn">Buy Now</a>
+  <p>Backed By Our 90-Day Money Back Guarantee</p><br>
+  <a href="#" onclick="goOrder()" class="btn">Order Now</a>
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
-  © 2025 Mitolyn. All Rights Reserved.<br>
-  This site is not affiliated with Google or Facebook.
+  © 2025 Mitolyn | All Rights Reserved <br>
+  Results may vary. This site is not affiliated with Google or Facebook.
 </div>
+
+<script>
+function goOrder(){
+  window.location.href = affiliateLink;
+}
+</script>
 
 </body>
 </html>
