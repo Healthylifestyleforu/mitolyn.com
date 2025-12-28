@@ -13,11 +13,7 @@ body{
   color:#222;
 }
 a{text-decoration:none}
-.container{
-  max-width:1200px;
-  margin:auto;
-  padding:0 20px;
-}
+.container{max-width:1200px;margin:auto;padding:0 20px}
 
 /* HEADER */
 .header{
@@ -57,49 +53,17 @@ a{text-decoration:none}
   color:#fff;
   padding:70px 0;
 }
-.hero-flex{
-  display:flex;
-  gap:40px;
-}
+.hero-flex{display:flex;gap:40px}
 .hero-left{width:40%}
 .hero-right{width:60%}
-
-.hero h1{
-  font-size:50px;
-  line-height:1.1;
-}
-.hero p{
-  font-size:18px;
-  margin:20px 0;
-}
-.product-img{
-  width:280px;
-}
+.hero h1{font-size:50px;line-height:1.1}
+.hero p{font-size:18px;margin:20px 0}
+.product-img{width:280px}
 .video{
   height:350px;
   background:#ccc;
   border-radius:8px;
   position:relative;
-}
-.play{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  width:70px;
-  height:70px;
-  background:red;
-  border-radius:50%;
-}
-.play:after{
-  content:"";
-  position:absolute;
-  top:50%;
-  left:55%;
-  transform:translate(-50%,-50%);
-  border-left:18px solid #fff;
-  border-top:10px solid transparent;
-  border-bottom:10px solid transparent;
 }
 
 /* TRUST */
@@ -107,11 +71,7 @@ a{text-decoration:none}
   background:#fff;
   padding:40px 0;
   text-align:center;
-}
-.trust span{
-  font-size:18px;
   font-weight:700;
-  margin:0 15px;
 }
 
 /* PRICE */
@@ -126,7 +86,7 @@ a{text-decoration:none}
   text-align:center;
 }
 .price h2{font-size:40px}
-.price .amount{
+.amount{
   font-size:48px;
   color:#ff5a1f;
   font-weight:800;
@@ -155,17 +115,13 @@ a{text-decoration:none}
   border-radius:10px;
   text-align:center;
 }
-.ing img{
-  width:120px;
-  margin-bottom:15px;
-}
+.ing img{width:120px;margin-bottom:15px}
 
-/* IMAGE GALLERY */
+/* GALLERY */
 .gallery{
   background:#fff;
   padding:70px 0;
 }
-.gallery h2{text-align:center;font-size:36px}
 .gallery-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -183,28 +139,42 @@ a{text-decoration:none}
   background:#eef3f8;
   padding:70px 0;
 }
-.reviews h2{text-align:center;font-size:38px}
-.review-box{
-  background:#fff;
-  padding:25px;
-  border-radius:10px;
-}
 .review-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
   gap:25px;
   margin-top:40px;
 }
+.review-box{
+  background:#fff;
+  padding:25px;
+  border-radius:10px;
+}
 .stars{color:#ffcc33}
 
-/* FINAL CTA */
+/* CTA */
 .cta{
   background:#0b84c6;
   color:#fff;
   padding:80px 0;
   text-align:center;
 }
-.cta h2{font-size:42px}
+
+/* STICKY BUTTON */
+.sticky-btn{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  z-index:999;
+}
+.sticky-btn a{
+  background:#ff5a1f;
+  color:#fff;
+  padding:15px 22px;
+  border-radius:50px;
+  font-weight:800;
+  box-shadow:0 4px 15px rgba(0,0,0,.3);
+}
 
 /* FOOTER */
 .footer{
@@ -220,6 +190,19 @@ a{text-decoration:none}
   .hero-left,.hero-right{width:100%}
 }
 </style>
+
+<!-- 🔥 AFFILIATE LINK CONFIG -->
+<script>
+  const AFFILIATE_LINK = "https://61aa51o5nq38gy8btltadd3oci.hop.clickbank.net";
+
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".buy-btn").forEach(btn => {
+      btn.href = AFFILIATE_LINK;
+      btn.target = "_blank";
+    });
+  });
+</script>
+
 </head>
 
 <body>
@@ -229,10 +212,9 @@ a{text-decoration:none}
   <div class="container header-flex">
     <div class="logo">MITOLYN</div>
     <div class="nav">
-      <a href="#">About</a>
-      <a href="#">Ingredients</a>
-      <a href="#">Reviews</a>
-      <a href="#" class="btn">Order Now</a>
+      <a href="#ingredients">Ingredients</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#" class="btn buy-btn">Order Now</a>
     </div>
   </div>
 </div>
@@ -241,88 +223,86 @@ a{text-decoration:none}
 <div class="hero">
   <div class="container hero-flex">
     <div class="hero-left">
-      <img src="ADD-BOTTLE-IMAGE-HERE.png" class="product-img">
+      <img src="ADD-BOTTLE-IMAGE.png" class="product-img">
     </div>
     <div class="hero-right">
       <h1>Unlock Your<br>Metabolic Power</h1>
-      <p>Burn More Calories, Increase Energy & Feel Amazing Naturally.</p>
-      <div class="video">
-        <div class="play"></div>
-      </div>
+      <p>Burn More Calories, Boost Energy & Feel Amazing.</p>
+      <div class="video"></div>
+      <br>
+      <a href="#" class="btn buy-btn">Order Now</a>
     </div>
   </div>
 </div>
 
 <!-- TRUST -->
 <div class="trust">
-  <span>✔ 100% Satisfaction</span>
-  <span>✔ 90-Day Money Back Guarantee</span>
-  <span>✔ Made in USA</span>
+  ✔ 100% Satisfaction &nbsp; | &nbsp; ✔ 90-Day Money-Back Guarantee &nbsp; | &nbsp; ✔ Secure Checkout
 </div>
 
 <!-- PRICE -->
 <div class="price">
   <div class="container">
     <div class="price-box">
-      <h2>Special Offer</h2>
+      <h2>Today’s Special Price</h2>
       <div class="amount">$49 Per Bottle</div>
       <p>Free Shipping Included</p>
-      <div class="guarantee">90 Days 100% Money Back Guarantee</div>
+      <div class="guarantee">90 Days • 100% Money-Back Guarantee</div>
       <br>
-      <a href="#" class="btn">Order Now</a>
+      <a href="#" class="btn buy-btn">Yes! I Want Mitolyn</a>
     </div>
   </div>
 </div>
 
 <!-- INGREDIENTS -->
-<div class="ingredients">
+<div class="ingredients" id="ingredients">
   <div class="container">
     <h2>Powerful Natural Ingredients</h2>
     <div class="ing-grid">
       <div class="ing">
-        <img src="ADD-INGREDIENT-IMAGE.png">
+        <img src="ING-IMAGE.png">
         <h3>Ingredient One</h3>
-        <p>Supports metabolism & energy.</p>
+        <p>Supports metabolism & fat burn.</p>
       </div>
       <div class="ing">
-        <img src="ADD-INGREDIENT-IMAGE.png">
+        <img src="ING-IMAGE.png">
         <h3>Ingredient Two</h3>
-        <p>Boosts fat burning naturally.</p>
+        <p>Boosts natural energy.</p>
       </div>
       <div class="ing">
-        <img src="ADD-INGREDIENT-IMAGE.png">
+        <img src="ING-IMAGE.png">
         <h3>Ingredient Three</h3>
-        <p>Improves overall health.</p>
+        <p>Supports overall health.</p>
       </div>
     </div>
   </div>
 </div>
 
-<!-- IMAGE GALLERY -->
+<!-- GALLERY -->
 <div class="gallery">
   <div class="container">
-    <h2>Product & Lifestyle Images</h2>
+    <h2>Product Images</h2>
     <div class="gallery-grid">
-      <img src="ADD-IMAGE-1.png">
-      <img src="ADD-IMAGE-2.png">
-      <img src="ADD-IMAGE-3.png">
+      <img src="IMAGE-1.png">
+      <img src="IMAGE-2.png">
+      <img src="IMAGE-3.png">
     </div>
   </div>
 </div>
 
 <!-- REVIEWS -->
-<div class="reviews">
+<div class="reviews" id="reviews">
   <div class="container">
     <h2>Real Customer Reviews</h2>
     <div class="review-grid">
       <div class="review-box">
         <div class="stars">★★★★★</div>
-        <p>Amazing results in just weeks!</p>
+        <p>Amazing results within weeks.</p>
         <strong>— Helen P</strong>
       </div>
       <div class="review-box">
         <div class="stars">★★★★★</div>
-        <p>Energy levels are much higher.</p>
+        <p>My energy level is so much higher.</p>
         <strong>— Nicholas D</strong>
       </div>
       <div class="review-box">
@@ -334,17 +314,22 @@ a{text-decoration:none}
   </div>
 </div>
 
-<!-- CTA -->
+<!-- FINAL CTA -->
 <div class="cta">
   <h2>Try Mitolyn Risk-Free Today</h2>
-  <p>Backed By Our 90-Day Money Back Guarantee</p>
-  <a href="#" class="btn">Order Now</a>
+  <p>Protected by Our 90-Day Money-Back Guarantee</p>
+  <a href="#" class="btn buy-btn">Order Now</a>
+</div>
+
+<!-- STICKY BUTTON -->
+<div class="sticky-btn">
+  <a href="#" class="buy-btn">Buy Now</a>
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
-  © 2025 Mitolyn | All Rights Reserved <br>
-  Results may vary. This site is not affiliated with Google or Facebook.
+  © 2025 Mitolyn. All Rights Reserved.<br>
+  This site is not affiliated with Google or Facebook.
 </div>
 
 </body>
