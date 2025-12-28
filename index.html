@@ -1,258 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VitaBoost - Official Website</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f9fc; color: #333; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-        header { background-color: #007bff; color: white; text-align: center; padding: 20px; }
-        .hero { text-align: center; padding: 50px 20px; background-color: #e6f7ff; }
-        .pricing { display: flex; justify-content: space-around; flex-wrap: wrap; padding: 40px 20px; }
-        .bundle { border: 1px solid #ddd; padding: 20px; margin: 10px; width: 300px; text-align: center; background: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        .popular { border-color: #28a745; background: #fffacd; }
-        .guarantee { text-align: center; padding: 40px; background: #fff; }
-        .bonuses { display: flex; justify-content: space-around; flex-wrap: wrap; padding: 40px 20px; background: #f8f9fa; }
-        .bonus { width: 400px; text-align: center; margin: 20px; }
-        .science { padding: 40px 20px; background: white; }
-        .ingredients { display: flex; flex-wrap: wrap; justify-content: space-around; padding: 40px 20px; background: #e9f7ef; }
-        .ingredient { width: 300px; text-align: center; margin: 20px; }
-        .testimonials { padding: 40px 20px; background: white; }
-        .testimonial { display: flex; align-items: center; margin: 20px 0; border-bottom: 1px solid #ddd; padding-bottom: 20px; }
-        .testimonial img { border-radius: 50%; margin-right: 20px; width: 80px; height: 80px; }
-        .faqs { padding: 40px 20px; background: #f8f9fa; }
-        button { background: #ff9900; color: white; padding: 15px 30px; border: none; cursor: pointer; font-size: 18px; border-radius: 5px; }
-        button:hover { background: #e68a00; }
-        .nav { background: white; padding: 10px; text-align: center; }
-        .nav a { margin: 0 15px; text-decoration: none; color: #333; }
-        .nav button { background: #ff4500; }
-        .seal { width: 80px; height: 80px; margin: 10px; }
-    </style>
+<meta charset="UTF-8">
+<title>MitoLyn Hero Section</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #0b84c6;
+}
+
+/* Header */
+.header {
+  background: #ffffff;
+  padding: 12px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg,#ff4aa2,#ffa84c,#6a5cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav a {
+  margin: 0 14px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.order-btn {
+  background: #ff5a1f;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  padding: 60px 40px;
+  display: flex;
+  gap: 50px;
+  max-width: 1200px;
+  margin: auto;
+  align-items: center;
+}
+
+.left {
+  width: 40%;
+  color: #fff;
+}
+
+.product-img {
+  width: 260px;
+  margin-bottom: 20px;
+}
+
+.review {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ddd;
+}
+
+.stars {
+  color: #ffc83d;
+  font-size: 16px;
+}
+
+.review p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.review strong {
+  display: block;
+  margin-top: 4px;
+}
+
+/* Right side */
+.right {
+  width: 60%;
+  color: #fff;
+}
+
+.right h1 {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.right h1 span {
+  display: block;
+}
+
+.right p {
+  margin: 16px 0 26px;
+  font-size: 18px;
+}
+
+/* Video box */
+.video-box {
+  position: relative;
+  background: #ccc;
+  height: 320px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  background: #ff1e1e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-btn::before {
+  content: "";
+  border-left: 18px solid #fff;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  margin-left: 4px;
+}
+</style>
 </head>
+
 <body>
-    <nav class="nav">
-        <a href="#bonuses">FREE Bonuses</a>
-        <a href="#science">About</a>
-        <a href="#ingredients">Ingredients</a>
-        <a href="#faqs">FAQ</a>
-        <button>Order Now</button>
-    </nav>
 
-    <section class="hero">
-        <h1 style="color: #007bff;">Unlock Your Vitality Power</h1>
-        <p>Burn More Energy & Feel Amazing With VitaBoost.</p>
-        <img src="https://via.placeholder.com/300x400?text=VitaBoost+Bottle" alt="VitaBoost Bottle" style="max-width: 200px;">
-        <div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div style="text-align: left; max-width: 300px; margin: 20px auto;">
-            <img src="https://via.placeholder.com/50x50?text=User" alt="User" style="border-radius: 50%;">
-            <p>⭐⭐⭐⭐⭐</p>
-            <p>"This really works – energy's up, weight down!"</p>
-            <p>Helen P. - Real User Review</p>
-        </div>
-    </section>
+<!-- Header -->
+<div class="header">
+  <div class="logo">MITOLYN</div>
 
-    <section class="pricing">
-        <h2>Claim Your Discounted VitaBoost Below For Huge Savings</h2>
-        <div class="bundle">
-            <h3>BASIC</h3>
-            <p>1 Bottle - 30 Day Supply</p>
-            <img src="https://via.placeholder.com/150x200?text=1+Bottle" alt="1 Bottle">
-            <p>$79</p>
-            <button>Buy Now</button>
-        </div>
-        <div class="bundle popular">
-            <h3>MOST POPULAR</h3>
-            <p>6 Bottles - 180 Day Supply</p>
-            <img src="https://via.placeholder.com/300x200?text=6+Bottles" alt="6 Bottles">
-            <p>$294</p>
-            <p>✔ 2 Free Bonuses! ✔ Free US Shipping!</p>
-            <button>Buy Now</button>
-        </div>
-        <div class="bundle">
-            <h3>BUNDLE</h3>
-            <p>3 Bottles - 90 Day Supply</p>
-            <img src="https://via.placeholder.com/250x200?text=3+Bottles" alt="3 Bottles">
-            <p>$177</p>
-            <p>✔ 2 Free Bonuses!</p>
-            <button>Buy Now</button>
-        </div>
-    </section>
+  <div class="nav">
+    <a href="#">FREE Bonuses</a>
+    <a href="#">About</a>
+    <a href="#">Ingredients</a>
+    <a href="#">FAQ</a>
+    <a href="#" class="order-btn">Order Now →</a>
+  </div>
+</div>
 
-    <section class="guarantee">
-        <h2>100% Satisfaction 90-Day Money Back Guarantee</h2>
-        <img src="https://via.placeholder.com/150x150?text=90+Days+Guarantee" alt="90 Days Guarantee Seal" class="seal">
-        <p>Your order today is protected by my iron-clad 90-day 100% money-back guarantee. If you are not astonished how fast your deep stubborn fat stores melt away into pure energy, or shocked as you admire your new toned, slim body in the mirror, then at any time in the next 90 days let us know and we'll refund every single penny of your investment. No questions asked.</p>
-        <div style="display: flex; justify-content: center;">
-            <img src="https://via.placeholder.com/80x80?text=GMP" alt="GMP" class="seal">
-            <img src="https://via.placeholder.com/80x80?text=FDA" alt="FDA" class="seal">
-            <img src="https://via.placeholder.com/80x80?text=Natural" alt="Natural" class="seal">
-            <img src="https://via.placeholder.com/80x80?text=Made+In+USA" alt="Made In USA" class="seal">
-            <img src="https://via.placeholder.com/80x80?text=Non-GMO" alt="Non-GMO" class="seal">
-        </div>
-        <p>VitaBoost is proudly manufactured in the USA with the finest of domestic and foreign ingredients.</p>
-    </section>
+<!-- Hero Section -->
+<div class="hero">
 
-    <section class="bonuses" id="bonuses">
-        <h2>Get 2 FREE Bonuses With 3 or 6 Bottle Orders!</h2>
-        <div class="bonus">
-            <h3>BONUS #1: Vitality Boost Guide</h3>
-            <img src="https://via.placeholder.com/200x300?text=Bonus+1" alt="Bonus 1">
-            <p>100% FREE - Quick tips to enhance your daily energy using natural methods.</p>
-        </div>
-        <div class="bonus">
-            <h3>BONUS #2: Mindset Mastery</h3>
-            <img src="https://via.placeholder.com/200x300?text=Bonus+2" alt="Bonus 2">
-            <p>100% FREE - Strategies to maintain motivation and achieve wellness goals.</p>
-        </div>
-        <p>*95% of customers choose 6 bottles for best results*</p>
-    </section>
+  <!-- Left -->
+  <div class="left">
+    <!-- Replace src with your bottle image -->
+    <img src="https://via.placeholder.com/260x360" class="product-img" alt="MitoLyn Bottle">
 
-    <section class="science" id="science">
-        <h2>December 2025 - Breakthrough in Vitality Science</h2>
-        <p>Recent studies reveal the surprising root of low energy... and it's easier to fix than you think.</p>
-        <p>Research from top universities shows that low cellular vitality is common in those feeling tired, while high levels correlate with boundless energy and wellness.</p>
-        <p>VitaBoost targets this with natural ingredients to restore balance.</p>
-        <p>References: (a) Cellular vitality studies; (b) Nutrient impact on energy.</p>
-    </section>
+    <div class="review">
+      <div class="avatar"></div>
+      <div>
+        <div class="stars">★★★★★ 5/5</div>
+        <p>“This really works – energy’s up, lbs down!”</p>
+        <strong>Helen P – Real User Review</strong>
+      </div>
+    </div>
 
-    <section class="ingredients" id="ingredients">
-        <h2>Inside Every VitaBoost Capsule</h2>
-        <p>A unique blend of 6 potent ingredients for ultimate vitality!</p>
-        <div class="ingredient">
-            <img src="https://via.placeholder.com/200x200?text=Ingredient+1" alt="Maqui Berry">
-            <h3>Maqui Berry</h3>
-            <p>Antioxidant-rich for cellular protection and energy.</p>
-        </div>
-        <div class="ingredient">
-            <img src="https://via.placeholder.com/200x200?text=Ingredient+2" alt="Rhodiola">
-            <h3>Rhodiola</h3>
-            <p>Reduces fatigue and boosts mental clarity.</p>
-        </div>
-        <div class="ingredient">
-            <img src="https://via.placeholder.com/200x200?text=Ingredient+3" alt="Haematococcus">
-            <h3>Haematococcus</h3>
-            <p>Source of astaxanthin for stress relief.</p>
-        </div>
-        <div class="ingredient">
-            <img src="https://via.placeholder.com/200x200?text=Ingredient+4" alt="Amla">
-            <h3>Amla</h3>
-            <p>Vitamin C powerhouse for immunity and vitality.</p>
-        </div>
-        <div class="ingredient">
-            <img src="https://via.placeholder.com/200x200?text=Ingredient+5" alt="Theobroma Cacao">
-            <h3>Theobroma Cacao</h3>
-            <p>Improves mood and circulation.</p>
-        </div>
-        <div class="ingredient">
-            <img src="https://via.placeholder.com/200x200?text=Ingredient+6" alt="Schisandra">
-            <h3>Schisandra</h3>
-            <p>Supports liver health and endurance.</p>
-        </div>
-        <ul style="list-style: none; display: flex; justify-content: center; flex-wrap: wrap;">
-            <li>Natural Formula</li>
-            <li>Plant-Based</li>
-            <li>Non-GMO</li>
-            <li>Easy Capsules</li>
-            <li>No Stimulants</li>
-            <li>Non-Habit Forming</li>
-        </ul>
-    </section>
+    <div class="review">
+      <div class="avatar"></div>
+      <div>
+        <div class="stars">★★★★★ 5/5</div>
+        <p>“I can actually see the results, it's incredible!”</p>
+        <strong>Nicholas D – Real User Review</strong>
+      </div>
+    </div>
+  </div>
 
-    <section class="testimonials">
-        <h2>Real VitaBoost Users. Real Results.</h2>
-        <div class="testimonial">
-            <img src="https://via.placeholder.com/80x80?text=Lisa" alt="Lisa">
-            <div>
-                <h3>Lisa regained her energy...</h3>
-                <p>Verified Purchase</p>
-                <p>"I felt drained all day. VitaBoost gave me back my spark – now I'm active and lost 28 lbs!"</p>
-                <p>Lisa K. - New York, NY</p>
-            </div>
-        </div>
-        <div class="testimonial">
-            <img src="https://via.placeholder.com/80x80?text=Tom" alt="Tom">
-            <div>
-                <h3>Tom improved his stamina...</h3>
-                <p>Verified Purchase</p>
-                <p>"Gym sessions were tough. With VitaBoost, I have endless energy and dropped 35 lbs."</p>
-                <p>Tom R. - Los Angeles, CA</p>
-            </div>
-        </div>
-        <div class="testimonial">
-            <img src="https://via.placeholder.com/80x80?text=Emma" alt="Emma">
-            <div>
-                <h3>Emma cleared her mind...</h3>
-                <p>Verified Purchase</p>
-                <p>"Constant fog lifted. VitaBoost boosted my focus and I shed 40 lbs naturally."</p>
-                <p>Emma S. - Chicago, IL</p>
-            </div>
-        </div>
-    </section>
+  <!-- Right -->
+  <div class="right">
+    <h1>
+      Unlock Your<br>
+      <span>Metabolic Power</span>
+    </h1>
 
-    <section class="pricing">
-        <h2>Claim Your Discounted VitaBoost Below For Huge Savings</h2>
-        <div class="bundle">
-            <h3>BASIC</h3>
-            <p>1 Bottle - 30 Day Supply</p>
-            <img src="https://via.placeholder.com/150x200?text=1+Bottle" alt="1 Bottle">
-            <p>$79</p>
-            <button>Buy Now</button>
-        </div>
-        <div class="bundle popular">
-            <h3>MOST POPULAR</h3>
-            <p>6 Bottles - 180 Day Supply</p>
-            <img src="https://via.placeholder.com/300x200?text=6+Bottles" alt="6 Bottles">
-            <p>$294</p>
-            <p>✔ 2 Free Bonuses! ✔ Free US Shipping!</p>
-            <button>Buy Now</button>
-        </div>
-        <div class="bundle">
-            <h3>BUNDLE</h3>
-            <p>3 Bottles - 90 Day Supply</p>
-            <img src="https://via.placeholder.com/250x200?text=3+Bottles" alt="3 Bottles">
-            <p>$177</p>
-            <p>✔ 2 Free Bonuses!</p>
-            <button>Buy Now</button>
-        </div>
-    </section>
+    <p>Burn More Calories & Feel Great With Mitolyn.</p>
 
-    <section class="faqs" id="faqs">
-        <h2>Frequently Asked Questions</h2>
-        <details>
-            <summary>Is VitaBoost right for me?</summary>
-            <p>If you're tired despite good habits, yes! It helps restore energy for ages 20-80+.</p>
-        </details>
-        <details>
-            <summary>Is VitaBoost safe?</summary>
-            <p>Absolutely, produced in FDA-registered facility with natural ingredients. Consult doctor if unsure.</p>
-        </details>
-        <details>
-            <summary>How many bottles should I order?</summary>
-            <p>For best results, 3-6 months supply. Save more with bundles.</p>
-        </details>
-        <details>
-            <summary>How do I take VitaBoost?</summary>
-            <p>One capsule daily with a meal.</p>
-        </details>
-        <details>
-            <summary>Is this a one-time payment?</summary>
-            <p>Yes, no hidden fees or subscriptions.</p>
-        </details>
-        <details>
-            <summary>What if it doesn't work for me?</summary>
-            <p>90-day full refund guarantee.</p>
-        </details>
-        <details>
-            <summary>What's next?</summary>
-            <p>Select your package and start feeling vital!</p>
-        </details>
-    </section>
+    <div class="video-box">
+      <!-- Video thumbnail can be background-image -->
+      <div class="play-btn"></div>
+    </div>
+  </div>
 
-    <footer style="text-align: center; padding: 20px; background: #007bff; color: white;">
-        <p>Scientific References: Links to studies on vitality and ingredients.</p>
-    </footer>
+</div>
+
 </body>
 </html>
